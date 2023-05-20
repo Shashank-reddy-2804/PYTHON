@@ -1,0 +1,76 @@
+GUESS THE NUMBER (IN PYTHON)
+
+
+
+#Import random module
+import rando
+
+This module will be used in selecting a number between a defined set or range. We now need to select a range between which the user is to guess a number. To do this, the user inputs a number; a lower limit and an upper limit.
+
+#Import random module.
+import random
+
+#Choose an upper limit and a lower limit.
+#Use the int function to ensure the value entered is an integer.
+upper_limit = int(input("Enter upper limit: "))
+lower_limit = int(input("Enter lower limit: “))
+
+
+After getting the upper limit and the lower limit within which a random number will be selected, we pick a random number using a function from the random module.
+
+#Import random module.
+import random
+
+#Choose an upper limit and a lower limit.
+#Use the int function to ensure the value entered is an integer.
+upper_limit = int(input("Enter upper limit: "))
+lower_limit = int(input("Enter lower limit: "))
+
+#Select a random number between the upper limit and the lower limit.
+#The function takes the upper limit and the lower limit as parameters and picks a number between the two numbers.
+#In python, variables can be declared and assigned at the same time.
+random_numer = random.randint(lower_limit,upper_limit)
+print("You will have to choose a number between ",upper_limit, " and ",lower_limit)
+
+The user is then assigned a number of chances to guess a number which will be a counter for a loop. We use a while loop since the user can get the right guess at any trial. The while case will check if the user has guessed the right number and if so, exits the loop. If not the number of chances decrements by one until the user has no more chances and the random number is revealed to him.
+
+To ensure that the program runs continuously and doesn’t close the program window, we add a true statement and print a line to separate the blocks.
+
+
+
+while True:
+    # Import random module.
+    import random
+
+    # Choose an upper limit and a lower limit.
+    # Use the int function to ensure the value entered is an integer.
+    lower_limit = int(input("Enter the lower limit: "))
+    upper_limit = int(input("Enter upper limit: "))
+
+    # We select a number randomly and store it in variable
+    # The function takes the upper limit and the lower limit as parameters and picks a number between the two numbers.
+    # In python, variables can be declared and assigned at the same time
+    random_number = random.randint(lower_limit, upper_limit)
+    print("You will have to choose a number between ", upper_limit, " and ", lower_limit)
+
+    # We assign a variable "Chances" that will act as the counter for a loop
+    # The user will have to input his guess so we assign his guess into a variable.
+    chances = 0
+    while chances < 8:
+        chances += 1
+        guess = int(input("Enter your guess: "))
+        if random_number == guess:
+            print("Congragulations, you did it. The number was ", random_number)
+            break
+        elif guess < random_number:
+            print("You guessed a small number.")
+        elif guess > random_number:
+            print("You guessed a large number.")
+        if chances == 7:
+            print("\n You've run out of chances")
+            print("\n The number was ", random_number)
+            print("Better luck next time")
+            break
+    print("\n")
+    break
+
