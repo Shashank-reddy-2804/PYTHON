@@ -1,0 +1,89 @@
+QUIZ GAME
+
+import random
+import time
+#print * 80 times
+for i in range(80):
+    print("*",end="")
+    time.sleep(0)
+
+print()
+print("\t\t\t        Welcome to")
+print("\t\t\tKaun Banega Crorepati")
+for i in range(80):
+    print("*",end="")
+    time.sleep(0)
+print()
+a=input("\tEnter Your Name - ")
+for i in range(80):
+    print("*",end="")
+    time.sleep(0)
+print()
+while True:
+    while True:
+        selectquestion=random.choice(questions)
+        if selectquestion in attempquestion:
+            pass
+        elif selectquestion not in attempquestion:
+            attempquestion.append(selectquestion)
+            questionindex=questions.index(selectquestion)
+            correctanswer=answer[questionindex]
+            break
+
+ to hold the answer
+
+optionslist=[]
+inoptionlist=[]
+optioncount=1
+while optioncount<4:
+    optionselection=random.choice(wronganswers[questionindex])
+    if optionselection in inoptionlist:
+        pass
+    elif optionselection not in inoptionlist:
+        optionslist.append(optionselection)
+        inoptionlist.append(optionselection)
+        optioncount+=1
+optionslist.append(correctanswer)
+
+Code for displaying questions
+
+alreadydisplay=[]
+optiontodisplay=[]
+a1=True
+while a1:
+    a=random.choice(optionslist)
+    if a in alreadydisplay:
+        pass
+    else:
+        alreadydisplay.append(a)
+        optiontodisplay.append(a)
+        a1=not True
+a1=True
+while a1:
+    b=random.choice(optionslist)
+    if b in alreadydisplay:
+        pass
+    else:
+        alreadydisplay.append(b)
+        optiontodisplay.append(b)
+        a1=not True
+a1=True
+while a1:
+    c=random.choice(optionslist)
+    if c in alreadydisplay:
+        pass
+    else:
+  alreadydisplay.append(c)
+        optiontodisplay.append(c)
+        a1=not True
+a1=True
+while a1:
+    d=random.choice(optionslist)
+    if d in alreadydisplay:
+        pass
+    else:
+        alreadydisplay.append(d)
+        optiontodisplay.append(d)
+        a1=not True
+
+
